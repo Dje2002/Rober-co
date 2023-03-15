@@ -1,0 +1,273 @@
+.bg {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 9999;
+    min-height: 100vh;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    background: $color-indigo-60;
+  }
+
+  &::after {
+    content: '';
+    max-width: 1280px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url('../img/image/banner-bg.svg') no-repeat;
+    background-size: cover;
+    z-index: 99999;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .bg {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.banner {
+  padding: 0 20px;
+  margin-top: 85px;
+  position: relative;
+  z-index: 99999999;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  &-social {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    &__icon {
+      padding: 10px;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      fill: $color-black-50;
+      transition: .6s all;
+
+      &:hover {
+        background: $color-aqua-50;
+        fill: $color-white-50
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    align-items: end;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 80px;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 43px;
+        color: $color-aqua-50;
+      }
+
+      h1 {
+        max-width: 514px;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 80px;
+        color: $color-black-50;
+      }
+
+      &-comment {
+        margin-top: 80px;
+        position: relative;
+        padding: 30px 37px;
+        box-sizing: border-box;
+        background: $color-white-100;
+
+        img {
+          position: absolute;
+          top: -30px;
+          left: 0;
+          padding: 5px;
+          border-radius: 50%;
+          background: $color-white-50;
+          box-shadow: 0px 4px 8px rgba(68, 68, 68, 0.25);
+        }
+
+        p {
+          max-width: 396px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 30px;
+          color: $color-white-600;
+        }
+      }
+
+      &-buttons {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        gap: 55px;
+
+        &__btn {
+          padding: 20px 50px;
+          border-radius: 32px;
+          background: $color-aqua-50;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+          color: $color-white-50;
+          text-transform: uppercase;
+        }
+
+        &__link {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 30px;
+          color: $color-black-50;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  &-image {
+    max-width: 529px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .banner {
+    margin-top: 75px;
+    justify-content: center;
+  
+    &-content {
+      gap: 70px;
+  
+      &__info {
+        span {
+          font-size: 22px;
+        }
+  
+        h1 {
+          font-size: 60px;
+        }
+  
+        &-comment {
+          margin-top: 60px;
+        }
+  
+        &-buttons {
+          margin-top: 40px;
+          gap: 55px;
+  
+          &__btn {
+            padding: 20px 50px;
+          }
+  
+          &__link {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner {
+    margin-top: 65px;
+    
+    &-social{
+      flex-direction: row;
+    }
+  
+    &-content {
+      flex-direction: row;
+      gap: 20px;
+  
+      &__info {
+        span {
+          font-size: 20px;
+        }
+  
+        h1 {
+          font-size: 54px;
+        }
+  
+        &-comment {
+          margin-top: 50px;
+        }
+  
+        &-buttons {
+          margin-top: 30px;
+          gap: 35px;
+  
+          &__btn {
+            padding: 20px 50px;
+          }
+  
+          &__link {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner {
+    margin-top: 75px;
+  
+    &-content {
+      gap: 70px;
+  
+      &__info {
+        span {
+          font-size: 22px;
+        }
+  
+        h1 {
+          font-size: 36px;
+        }
+  
+        &-comment {
+          margin-top: 30px;
+        }
+  
+        &-buttons {
+          margin-top: 20px;
+          gap: 25px;
+  
+          &__btn {
+            padding: 10px 45px;
+          }
+  
+          &__link {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  margin-top: 0 !important;
+  position: static;
+  width: max-content;
+  height: max-content;
+
+  &::after {
+    display: none;
+  }
+}
+
+.work {
+  margin-top: 150px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 43px;
+      color: $color-aqua-50;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 76px;
+      color: $color-black-50;
+    }
+  }
+
+  &-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h3 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
+        color: $color-black-50;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-white-600;
+      }
+    }
+  }
+
+  &-buttons {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__btn {
+      padding: 15px;
+      border-radius: 50%;
+      background: $color-indigo-60;
+    }
+
+    &__icon {
+      width: 30px;
+      height: 30px;
+      fill: $color-white-50;
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .work {
+    margin-top: 100px;
+    gap: 30px;
+  
+    &-title {
+      span {
+        font-size: 22px;
+      }
+  
+      h1 {
+        font-size: 46px;
+      }
+    }
+  
+    &-buttons {
+      margin-top: 40px;
+      gap: 20px;
+  
+      &__btn {
+        padding: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .work {
+    margin-top: 80px;
+    gap: 25px;
+  
+    &-title {
+      span {
+        font-size: 20px;
+      }
+  
+      h1 {
+        font-size: 40px;
+      }
+    }
+  
+    &-buttons {
+      margin-top: 30px;
+      gap: 10px;
+  
+      &__btn {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .work {
+    margin-top: 50px;
+    gap: 20px;
+  
+    &-title {
+      span {
+        font-size: 18px;
+      }
+  
+      h1 {
+        font-size: 34px;
+      }
+    }
+  
+    &-buttons {
+      margin-top: 20px;
+    }
+  }
+}
